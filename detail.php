@@ -5,10 +5,10 @@ MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a
 MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
 
 
-/*$preference 	= new MercadoPago\Preference();
+$preference 	= new MercadoPago\Preference();
 $payer 			= new MercadoPago\Payer();
 $item 			= new MercadoPago\Item();
-*/
+$mp_items 		= array();
 
 // Agrego el item
 $item->title 		= $_POST['title'];
@@ -17,6 +17,7 @@ $item->picture_url 	= $_POST['img'];
 $item->quantity 	= 1;
 $item->unit_price 	= $_POST['price'];
 $item->currency_id 	= 'ARS';
+array_push($mp_items, $item);
 
 
 // Datos el comprador
@@ -37,8 +38,8 @@ $payer->address = array
 
 
 
-/*// Obtengo el link
-$preference->items 				= $item;
+// Obtengo el link
+$preference->items 				= $mp_items;
 $preference->payer 				= $payer;
 $preference->external_reference = 'mariano.garcia@wertgroup.com.ar';
 $preference->auto_return 		= 'all';
@@ -68,7 +69,7 @@ try
 catch(Exception $e)
 {
 	die('error: ' . $e->getMessage());
-}*/
+}
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
