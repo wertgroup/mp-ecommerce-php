@@ -1,5 +1,5 @@
 <?php
-/*require_once dirname(__FILE__) . '/libraries/mercadopago/vendor/autoload.php';
+require_once dirname(__FILE__) . '/libraries/mercadopago/vendor/autoload.php';
 
 MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
 MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
@@ -8,7 +8,7 @@ MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
 $preference 	= new MercadoPago\Preference();
 $payer 			= new MercadoPago\Payer();
 $item 			= new MercadoPago\Item();
-*/
+
 
 // Agrego el item
 $item->title 		= $_POST['title'];
