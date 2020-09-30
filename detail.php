@@ -204,7 +204,7 @@ catch(Exception $e)
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <!--button type="button" class="mercadopago-button" formmethod="post">Pagar la compra</button-->
+                                    <button type="button" class="mercadopago-button" formmethod="post">Pagar la compra</button>
                                     <a href="<?php echo $preference->init_point;?>" class="mercadopago-button">Pagar la compra</a>
                                 </div>
                             </div>
