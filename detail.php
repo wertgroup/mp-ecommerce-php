@@ -52,7 +52,7 @@ $preference->back_urls 			= array
 
 $preference->payment_methods 	= array
 (
-	'excluded_payment_methods' 	=> array('id' => 'amex'),
+	'excluded_payment_methods' 	=> array('id' => 'visa'),
 	'excluded_payment_types' 	=> array('id' => 'atm'),
     'installments' 				=> 6
 );
