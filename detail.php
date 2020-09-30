@@ -1,5 +1,11 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
+
 require_once dirname(__FILE__) . '/libraries/mercadopago/vendor/autoload.php';
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 
 MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
 MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
