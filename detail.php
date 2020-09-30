@@ -49,14 +49,6 @@ $preference->back_urls 			= array
     'success' => 'https://wertgroup-mp-ecommerce-php.herokuapp.com/aprobado.php'
 );
 
-/*
-El pago haya sido exitoso. En la pantalla se deberá mostrar la información
-proveniente de los parámetros que enviamos en el Query String como:
-payment_method_id que se usó para pagar, el valor del campo
-external_reference y el ID de pago (payment_id o collection_id) de Mercado
-Pago
-*/
-
 $preference->payment_methods 	= array
 (
 	'excluded_payment_methods' 	= array('id' => 'amex'),
@@ -75,7 +67,7 @@ try
 }
 catch(Exception $e)
 {
-	die('error1: ' . $e->getMessage());
+	die('error: ' . $e->getMessage());
 }
 
 echo 'todo ok: <pre>' . print_r($preference, true) . '</pre>LINK: ' . $preference->init_point;
