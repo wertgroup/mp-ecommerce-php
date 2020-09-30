@@ -50,10 +50,10 @@ $preference->back_urls 			= array
     'success' => 'https://wertgroup-mp-ecommerce-php.herokuapp.com/aprobado.php'
 );
 
-$preference->payment_methods 	= array
+$preference->payment_methods = array
 (
-	'excluded_payment_methods' 	=> array('id' => 'visa'),
-	'excluded_payment_types' 	=> array('id' => 'atm'),
+    'excluded_payment_methods' 	=> array(array('id' => 'amex')),
+	'excluded_payment_types' 	=> array(array('id' => 'atm')),
     'installments' 				=> 6
 );
 
