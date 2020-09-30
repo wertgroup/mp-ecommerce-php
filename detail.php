@@ -37,7 +37,7 @@ $payer->address = array
 
 
 
-// Obtengo el link
+/*// Obtengo el link
 $preference->items 				= $item;
 $preference->payer 				= $payer;
 $preference->external_reference = 'mariano.garcia@wertgroup.com.ar';
@@ -68,7 +68,7 @@ try
 catch(Exception $e)
 {
 	die('error: ' . $e->getMessage());
-}
+}*/
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
