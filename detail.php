@@ -69,8 +69,6 @@ catch(Exception $e)
 {
 	die('error: ' . $e->getMessage());
 }
-
-echo 'todo ok: <pre>' . print_r($preference, true) . '</pre>LINK: ' . $preference->init_point;
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -205,7 +203,8 @@ echo 'todo ok: <pre>' . print_r($preference, true) . '</pre>LINK: ' . $preferenc
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="button" class="mercadopago-button" formmethod="post">Pagar la compra</button>
+                                    <!--button type="button" class="mercadopago-button" formmethod="post">Pagar la compra</button-->
+                                    <a href="<?php echo $preference->init_point;?>" class="mercadopago-button">Pagar la compra</a>
                                 </div>
                             </div>
                         </div>
