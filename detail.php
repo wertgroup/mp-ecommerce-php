@@ -1,3 +1,85 @@
+<?php
+require_once dirname(__FILE__) . '/libraries/mercadopago/vendor/autoload.php';
+
+MercadoPago\SDK::setAccessToken('APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398');
+MercadoPago\SDK::setIntegratorId('dev_24c65fb163bf11ea96500242ac130004');
+
+
+$preference 	= new MercadoPago\Preference();
+$payer 			= new MercadoPago\Payer();
+$item 			= new MercadoPago\Item();
+
+
+// Agrego el item
+$item->title 		= $_POST['title'];
+$item->description 	= 'Dispositivo móvil de Tienda e-commerce';
+$item->picture_url 	= $_POST['img'];
+$item->quantity 	= 1;
+$item->unit_price 	= $_POST['price'];
+$item->currency_id 	= 'ARS';
+
+
+// Datos el comprador
+$payer->email 	= 'test_user_63274575@testuser.com';
+$payer->name 	= 'Lalo';
+$payer->surname = 'Landa';
+$payer->phone 	= array
+(
+	'area_code' => '11',
+	'number' 	=> '22223333'
+);
+$payer->address = array
+(
+	'street_name' 	=> 'False',
+	'street_number' => '123',
+	'zip_code' 		=> '1111'
+);
+
+
+
+// Obtengo el link
+$preference->items 				= $item;
+$preference->payer 				= $payer;
+$preference->external_reference = 'mariano.garcia@wertgroup.com.ar';
+$preference->auto_return 		= 'all';
+$preference->back_urls 			= array
+(
+	'failure' => 'https://wertgroup-mp-ecommerce-php.herokuapp.com/rechazado.php',
+    'pending' => 'https://wertgroup-mp-ecommerce-php.herokuapp.com/pendiente.php',
+    'success' => 'https://wertgroup-mp-ecommerce-php.herokuapp.com/aprobado.php'
+);
+
+/*
+El pago haya sido exitoso. En la pantalla se deberá mostrar la información
+proveniente de los parámetros que enviamos en el Query String como:
+payment_method_id que se usó para pagar, el valor del campo
+external_reference y el ID de pago (payment_id o collection_id) de Mercado
+Pago
+*/
+
+$preference->payment_methods 	= array
+(
+	'excluded_payment_methods' 	= array('id' => 'amex'),
+	'excluded_payment_types' 	= array('id' => 'atm'),
+    'installments' 				=> 6
+);
+
+$preference->notification_url 	= 'https://wertgroup-mp-ecommerce-php.herokuapp.com/tracker.php';
+
+
+
+
+try
+{
+	$preference->save();
+}
+catch(Exception $e)
+{
+	die('error1: ' . $e->getMessage());
+}
+
+echo 'todo ok: <pre>' . print_r($preference, true) . '</pre>LINK: ' . $preference->init_point;
+?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
@@ -7,6 +89,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="format-detection" content="telephone=no">
 
+    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -130,7 +213,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                                    <button type="button" class="mercadopago-button" formmethod="post">Pagar la compra</button>
                                 </div>
                             </div>
                         </div>
