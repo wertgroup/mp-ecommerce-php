@@ -12,7 +12,7 @@ $item 			= new MercadoPago\Item();*/
 
 
 // Agrego el item
-$item->title 		= $_POST['title'];
+/*$item->title 		= $_POST['title'];
 $item->description 	= 'Dispositivo móvil de Tienda e-commerce';
 $item->picture_url 	= $_POST['img'];
 $item->quantity 	= 1;
@@ -34,7 +34,7 @@ $payer->address = array
 	'street_name' 	=> 'False',
 	'street_number' => '123',
 	'zip_code' 		=> '1111'
-);
+);*/
 
 
 
