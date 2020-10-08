@@ -11,9 +11,10 @@ $item 			= new MercadoPago\Item();
 $mp_items 		= array();
 
 // Agrego el item
+$item->id           = 1234;
 $item->title 		= $_POST['title'];
 $item->description 	= 'Dispositivo móvil de Tienda e-commerce';
-$item->picture_url 	= $_POST['img'];
+$item->picture_url 	= 'https://wertgroup-mp-ecommerce-php.herokuapp.com/' . $_POST['img'];
 $item->quantity 	= 1;
 $item->unit_price 	= $_POST['price'];
 $item->currency_id 	= 'ARS';
@@ -70,6 +71,8 @@ catch(Exception $e)
 {
 	die('error: ' . $e->getMessage());
 }
+
+die('<pre>' . print_r($preference, true) . '</pre>');
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
