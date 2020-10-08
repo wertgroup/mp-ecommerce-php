@@ -43,7 +43,7 @@ $payer->address = array
 $preference->items 				= $mp_items;
 $preference->payer 				= $payer;
 $preference->external_reference = 'mariano.garcia@wertgroup.com.ar';
-$preference->auto_return 		= 'all';
+$preference->auto_return 		= 'approved';
 $preference->back_urls 			= array
 (
 	'failure' => 'https://wertgroup-mp-ecommerce-php.herokuapp.com/rechazado.php',
