@@ -1,1 +1,244 @@
-resultado
+Pago aprobado
+payment_method_id: credit_card
+external_reference: mariano.garcia@wertgroup.com.ar
+payment_id o collection_id: 10442616405
+
+
+MercadoPago\MerchantOrder Object
+(
+    [id:protected] => 1829671213
+    [preferenceId:protected] => 
+    [dateCreated:protected] => 
+    [lastUpdate:protected] => 
+    [applicationId:protected] => 
+    [status:protected] => closed
+    [siteId:protected] => 
+    [payer:protected] => MercadoPago\Payer Object
+        (
+            [id:protected] => 471923173
+            [entity_type:protected] => 
+            [type:protected] => 
+            [name:protected] => 
+            [surname:protected] => 
+            [first_name:protected] => 
+            [last_name:protected] => 
+            [email:protected] => test_user_63274575@testuser.com
+            [date_created:protected] => 
+            [phone:protected] => 
+            [identification:protected] => 
+            [address:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+        )
+
+    [collector:protected] => stdClass Object
+        (
+            [id] => 469485398
+            [email] => test_user_97555375@testuser.com
+            [nickname] => TETE2587273
+        )
+
+    [sponsorId:protected] => 
+    [payments:protected] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [id] => 10442616405
+                    [transaction_amount] => 16000
+                    [total_paid_amount] => 19153.6
+                    [shipping_cost] => 0
+                    [currency_id] => ARS
+                    [status] => approved
+                    [status_detail] => accredited
+                    [operation_type] => regular_payment
+                    [date_approved] => 2020-09-30T20:11:07.000-04:00
+                    [date_created] => 2020-09-30T20:11:07.000-04:00
+                    [last_modified] => 2020-09-30T20:11:07.000-04:00
+                    [amount_refunded] => 0
+                )
+
+        )
+
+    [paidAmount:protected] => 
+    [refundedAmount:protected] => 
+    [shippingCost:protected] => 
+    [cancelled:protected] => 
+    [items:protected] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [id] => 
+                    [category_id] => 
+                    [currency_id] => ARS
+                    [description] => Dispositivo mÃ³vil de Tienda e-commerce
+                    [picture_url] => ./assets/u_10168742.jpg
+                    [title] => iPhone 8
+                    [quantity] => 1
+                    [unit_price] => 16000
+                )
+
+        )
+
+    [shipments:protected] => MercadoPago\Shipments Object
+        (
+            [mode:protected] => 
+            [local_pickup:protected] => 
+            [free_methods:protected] => 
+            [cost:protected] => 
+            [free_shipping:protected] => 
+            [receiver_address:protected] => 
+            [dimensions:protected] => 
+            [default_shipping_method:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+        )
+
+    [notificationUrl:protected] => 
+    [additionalInfo:protected] => 
+    [externalReference:protected] => 
+    [marketplace:protected] => NONE
+    [totalAmount:protected] => 
+    [_last:protected] => MercadoPago\MerchantOrder Object
+        (
+            [id:protected] => 1829671213
+            [preferenceId:protected] => 
+            [dateCreated:protected] => 
+            [lastUpdate:protected] => 
+            [applicationId:protected] => 
+            [status:protected] => closed
+            [siteId:protected] => 
+            [payer:protected] => MercadoPago\Payer Object
+                (
+                    [id:protected] => 471923173
+                    [entity_type:protected] => 
+                    [type:protected] => 
+                    [name:protected] => 
+                    [surname:protected] => 
+                    [first_name:protected] => 
+                    [last_name:protected] => 
+                    [email:protected] => test_user_63274575@testuser.com
+                    [date_created:protected] => 
+                    [phone:protected] => 
+                    [identification:protected] => 
+                    [address:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                )
+
+            [collector:protected] => stdClass Object
+                (
+                    [id] => 469485398
+                    [email] => test_user_97555375@testuser.com
+                    [nickname] => TETE2587273
+                )
+
+            [sponsorId:protected] => 
+            [payments:protected] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [id] => 10442616405
+                            [transaction_amount] => 16000
+                            [total_paid_amount] => 19153.6
+                            [shipping_cost] => 0
+                            [currency_id] => ARS
+                            [status] => approved
+                            [status_detail] => accredited
+                            [operation_type] => regular_payment
+                            [date_approved] => 2020-09-30T20:11:07.000-04:00
+                            [date_created] => 2020-09-30T20:11:07.000-04:00
+                            [last_modified] => 2020-09-30T20:11:07.000-04:00
+                            [amount_refunded] => 0
+                        )
+
+                )
+
+            [paidAmount:protected] => 
+            [refundedAmount:protected] => 
+            [shippingCost:protected] => 
+            [cancelled:protected] => 
+            [items:protected] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [id] => 
+                            [category_id] => 
+                            [currency_id] => ARS
+                            [description] => Dispositivo mÃ³vil de Tienda e-commerce
+                            [picture_url] => ./assets/u_10168742.jpg
+                            [title] => iPhone 8
+                            [quantity] => 1
+                            [unit_price] => 16000
+                        )
+
+                )
+
+            [shipments:protected] => MercadoPago\Shipments Object
+                (
+                    [mode:protected] => 
+                    [local_pickup:protected] => 
+                    [free_methods:protected] => 
+                    [cost:protected] => 
+                    [free_shipping:protected] => 
+                    [receiver_address:protected] => 
+                    [dimensions:protected] => 
+                    [default_shipping_method:protected] => 
+                    [_last:protected] => 
+                    [error:protected] => 
+                    [_pagination_params:protected] => 
+                    [_empty:protected] => 
+                )
+
+            [notificationUrl:protected] => 
+            [additionalInfo:protected] => 
+            [externalReference:protected] => 
+            [marketplace:protected] => NONE
+            [totalAmount:protected] => 
+            [_last:protected] => 
+            [error:protected] => 
+            [_pagination_params:protected] => 
+            [_empty:protected] => 
+            [external_reference] => mariano.garcia@wertgroup.com.ar
+            [preference_id] => 469485398-a9527786-4421-4a09-be71-31e0508d9d9f
+            [payouts] => Array
+                (
+                )
+
+            [notification_url] => https://wertgroup-mp-ecommerce-php.herokuapp.com/tracker.php
+            [date_created] => 2020-10-01T00:11:06.929+00:00
+            [last_updated] => 2020-10-01T00:11:07.965+00:00
+            [shipping_cost] => 0
+            [total_amount] => 16000
+            [site_id] => MLA
+            [paid_amount] => 16000
+            [refunded_amount] => 0
+            [additional_info] => 
+            [order_status] => paid
+        )
+
+    [error:protected] => 
+    [_pagination_params:protected] => 
+    [_empty:protected] => 
+    [external_reference] => mariano.garcia@wertgroup.com.ar
+    [preference_id] => 469485398-a9527786-4421-4a09-be71-31e0508d9d9f
+    [payouts] => Array
+        (
+        )
+
+    [notification_url] => https://wertgroup-mp-ecommerce-php.herokuapp.com/tracker.php
+    [date_created] => 2020-10-01T00:11:06.929+00:00
+    [last_updated] => 2020-10-01T00:11:07.965+00:00
+    [shipping_cost] => 0
+    [total_amount] => 16000
+    [site_id] => MLA
+    [paid_amount] => 16000
+    [refunded_amount] => 0
+    [additional_info] => 
+    [order_status] => paid
+)

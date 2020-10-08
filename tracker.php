@@ -63,7 +63,7 @@ else
 
 
 // Guardo los datos del pago
-$resultado  = print_r($merchant_order, true);
+$resultado  = json_encode($merchant_order);
 $fp         = fopen('resultado.txt', 'w');
 
 fwrite($fp, $resultado);
